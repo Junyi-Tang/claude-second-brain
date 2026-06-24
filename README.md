@@ -98,7 +98,8 @@ Then generates a fully customized second brain.
 
 - **Obsidian** (any version)
 - **Claude Code** (CLI, desktop, or web)
-- **Omnisearch** plugin (optional, for full-text search in Obsidian)
+- **Omnisearch** plugin (recommended, for full-text search in Obsidian)
+- **Dataview** plugin (optional, for dynamic auto-generated indexes in Obsidian)
 
 ## No RAG Required
 
