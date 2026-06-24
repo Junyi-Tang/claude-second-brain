@@ -65,10 +65,11 @@ When you ask about discussions, debates, or advisor opinions, Claude goes to raw
 
 ## Quick Start
 
-1. **Copy the template** into your Obsidian vault
-2. **Run the setup prompt** (see below) to customize for your workflow
-3. **Add your notes** to the raw folders (`Research/`, `Academics/`, etc.)
-4. **Start asking Claude** — it will find your notes automatically
+1. **Install Obsidian plugins** (see [Recommended Plugins](#recommended-plugins) below)
+2. **Copy the template** into your Obsidian vault
+3. **Run the setup prompt** (see below) to customize for your workflow
+4. **Add your notes** to the raw folders (`Research/`, `Academics/`, etc.)
+5. **Start asking Claude** — it will find your notes automatically
 
 ## Files Included
 
@@ -98,12 +99,37 @@ Then generates a fully customized second brain.
 
 - **Obsidian** (any version)
 - **Claude Code** (CLI, desktop, or web)
-- **Omnisearch** plugin (recommended, for full-text search in Obsidian)
-- **Dataview** plugin (optional, for dynamic auto-generated indexes in Obsidian)
+
+## Recommended Plugins
+
+### Omnisearch (strongly recommended)
+
+Omnisearch gives Obsidian full-text search across your entire vault — filenames, content, PDFs. Without it, you're limited to Obsidian's built-in search which is slower and less flexible.
+
+**Why it matters for this system:**
+- Claude Code uses Grep/Glob to search your vault programmatically, but **you** need fast search in Obsidian too
+- When you have 500+ files, Omnisearch finds what you need instantly
+- Searches inside PDFs (if enabled in settings)
+
+**Install:**
+1. Open Obsidian → Settings → Community Plugins → Browse
+2. Search "Omnisearch" → Install → Enable
+3. In Omnisearch settings, enable **PDF Indexing** if you have PDFs in your vault
+4. Use `Ctrl+Shift+O` to search anywhere in your vault
+
+The template includes pre-configured Omnisearch settings at `.obsidian/plugins/omnisearch/data.json`.
+
+### Other Useful Plugins
+
+| Plugin | Why |
+|---|---|
+| **Templater** | More powerful templates with dynamic content |
+| **Calendar** | Visual daily notes calendar (if you use daily notes) |
+| **Git** | Auto-commit vault changes to a git repo |
 
 ## No RAG Required
 
-This system works without any vector store, embedding pipeline, or RAG infrastructure. The vault map + file search is sufficient for vaults under ~500 files. For larger vaults, consider adding Omnisearch or a local embedding pipeline.
+This system works without any vector store, embedding pipeline, or RAG infrastructure. The vault map + file search is sufficient for vaults under ~500 files. For larger vaults, Omnisearch handles full-text search locally without any external service.
 
 ## License
 
