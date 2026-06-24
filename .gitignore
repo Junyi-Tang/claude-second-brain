@@ -1,0 +1,10 @@
+# Obsidian
+.obsidian/
+.trash/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Personal notes (not included in template)
+template/Research/
